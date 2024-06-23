@@ -151,7 +151,7 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-const text = "Full Stack Developer";
+const text = "Software Developer & Designer";
 let index = 0;
 
 function typeWriter() {

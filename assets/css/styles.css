@@ -163,7 +163,7 @@ img {
 
 /*==================== LAYOUT ====================*/
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -555,6 +555,10 @@ img {
 }
 
 /*==================== QUALIFICATION ====================*/
+.qualification{
+  height: auto !important;
+}
+
 .qualification__tabs{
   display: flex;
   justify-content: space-evenly;
@@ -599,9 +603,20 @@ img {
   margin-bottom: var(--mb-0);
 }
 
-.qualification__calendar{
+.qualification__calendar, .qualification__achievements{
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+  margin-bottom: var(--mb-1);
+}
+
+.qualification__description{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  list-style-type: '- ';
+}
+
+.qualification__description > li{
+  margin-bottom: var(--mb-0-25);
 }
 
 
@@ -636,6 +651,10 @@ img {
 }
 
 /*==================== PROJECTS ====================*/
+.projects{
+  height: auto !important;
+}
+
 .projects__container{
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -644,10 +663,13 @@ img {
 .projects__content{
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem .5rem 1.25rem 1.5rem;
   border-radius: .25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   transition: .3s;
+}
+
+.projects__description{
+  padding: 2em;
 }
 
 .projects__content:hover{
@@ -674,6 +696,12 @@ img {
 
 .projects__button:hover .button__icon{
   transform: translateX(.25rem);
+}
+
+.projects__content > img {
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .projects__modal{
@@ -741,6 +769,11 @@ img {
 }
 
 /*==================== PAPER ====================*/
+.paper {
+  height: auto !important;
+  margin-bottom: var(--mb-2-5);
+}
+
 .paper__container{
   overflow: initial;
 }
@@ -1141,10 +1174,6 @@ img {
     justify-content: center;
   }
 
-  .projects__content{
-    padding-right: 3.5rem;
-  }
-
   .projects__modal{
     padding: 0 .5rem;
   }
@@ -1204,12 +1233,16 @@ img {
   }
   
   .about__container,
-  .skills__container,
   .paper__content,
   .project__container,
   .contact__container,
   .footer__container{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
   }
 
   .qualification__sections{
@@ -1333,7 +1366,7 @@ img {
   }
 
   .qualification__sections{
-    grid-template-columns: .5fr;
+    grid-template-columns: .8fr;
   }
 
   .projects__container{
@@ -1343,10 +1376,6 @@ img {
 
   .projects__icon{
     font-size: 2rem;
-  }
-
-  .projects__content{
-    padding: 4rem 0 2rem 2.5rem;
   }
 
   .projects__modal-content{
@@ -1421,7 +1450,7 @@ img {
   }
 
   .projects__container{
-    grid-template-columns: repeat(3, 238px);
+    grid-template-columns: repeat(2, 400px);
   }
   
   .paper__content{
@@ -1446,10 +1475,6 @@ img {
 
   .swiper .swiper-pagination-testimonial{
     bottom: 0;
-  }
-
-  .contact__map{
-    width: 460px;
   }
 
   .contact__inputs{
