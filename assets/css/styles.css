@@ -1446,7 +1446,7 @@ img {
   }
 
   .projects__container{
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(3, 400px);
   }
   
   .paper__content{
